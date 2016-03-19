@@ -1,0 +1,45 @@
+<div ng-controller="GlobalController">
+
+<div ng-controller="GlobalController" ng-cloak layout="row">
+  <div flex>
+    <div class="demo-swipe" md-swipe-left="tuesday()" md-swipe-right="friday()">
+          <md-card>
+              <md-card-header>
+                <h1>Monday</h1>
+                <md-menu>
+                        <div ng-controller="rightCtrl">
+                          <div>
+                            <md-content>
+			                        <md-button ng-click="openRightMenu()"><b>Menu</b></md-button>
+                            </md-content>
+                            <md-sidenav md-component-id="right" class="md-sidenav-right">
+                              <md-button class="md-raised" ng-click="home()"><b>Home</b></md-button>
+                               <md-card>
+                                 <md-card-content>
+                                   <b>Developed by:<br><br><i>Yasin Shekh</i><br><br><i>Mohan Singh</i></b>
+                                 </md-card-content>
+                               </md-card>
+                            </md-sidenav>
+                          </div>
+                        </div>
+                </md-menu>
+              </md-card-header>
+
+              <div ng-controller="GlobalController">
+                <md-list>
+                  <md-list-item class="md-3-line" ng-repeat="sub in subjects">
+                          <div class="md-list-item-text">
+                             <b> {{sub.Monday}} </b>
+                          </div>
+                          <md-list-item class="md-secondary"><b>{{sub.Time}}</b> </md-list-item>
+
+                    <md-divider ng-if="!$last"></md-divider>
+
+                  </md-list-item>
+                </md-list>
+              </div>
+            </md-card>
+    </div>
+  </div>
+</div>
+
