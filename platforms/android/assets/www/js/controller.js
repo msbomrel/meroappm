@@ -4,7 +4,7 @@
 var app=angular
     .module('myController',[])
 
-    .controller('GlobalController',function ($scope,$location,$localStorage,Class19A,Class19B,Class18A,Class18B,Class17A,Class17B,Class16A,Class16B) {
+    .controller('GlobalController',function ($mdToast,$scope,$location,$localStorage,Class19A,Class19B,Class18A,Class18B,Class17A,Class17B,Class16A,Class16B) {
           var d = new Date();
           var n = d.getDay();
 
@@ -74,10 +74,6 @@ var app=angular
           $location.path('/day'+n);
         };
 
-        $scope.update=function(){
-          alert("Your routine has been updated!");
-          $location.reload();
-        };
 
         $scope.subjects=$localStorage.message;
         $scope.semester=$localStorage.sem;
@@ -103,10 +99,17 @@ var app=angular
       };
       /*backcallFactory.backcallfun();*/
 
+    $scope.update=function(){
+          $mdToast.show({
+          hideDelay   : 2000,
+          position    : 'top right',
+          controller  : 'ToastCtrl',
+          templateUrl : 'templates/toast-template.html'
+        });
 
-
-
-  })
+          $location.reload();
+        };
+    })
 
 
   .controller('rightCtrl',function($scope, $mdSidenav) {
@@ -131,4 +134,31 @@ var app=angular
                     'background-position': 'center center'
             });
         };
+    })
+
+  .controller('ToastCtrl', function($scope, $mdToast, $mdDialog) {
+      $scope.closeToast = function() {
+        if (isDlgOpen) return;
+        $mdToast
+          .hide()
+          .then(function() {
+            isDlgOpen = false;
+          });
+      };
+      $scope.openMoreInfo = function(e) {
+        if ( isDlgOpen ) return;
+        isDlgOpen = true;
+        $mdDialog
+          .show($mdDialog
+            .alert()
+            .title('More info goes here.')
+            .textContent('Something witty.')
+            .ariaLabel('More info')
+            .ok('Got it')
+            .targetEvent(e)
+          )
+          .then(function() {
+            isDlgOpen = false;
+          })
+      };
     });
