@@ -13,6 +13,7 @@ var app=angular
             $localStorage.store_nineteenA=data;
             });
 
+          $localStorage.sem='19 A';
           $localStorage.message=$localStorage.store_nineteenA;
           $location.path('/day'+n);
         };
@@ -20,6 +21,7 @@ var app=angular
             Class19B.query(function(data) {
             $localStorage.store_nineteenB=data;
             });
+          $localStorage.sem='19 B';
           $localStorage.message=$localStorage.store_nineteenB;
           $location.path('/day'+n);
         };
@@ -27,6 +29,7 @@ var app=angular
             Class18A.query(function(data) {
              $localStorage.store_eighteenA=data;
             });
+          $localStorage.sem='18 A';
           $localStorage.message=$localStorage.store_eighteenA;
           $location.path('/day'+n);
         };
@@ -34,6 +37,7 @@ var app=angular
             Class18B.query(function(data) {
             $localStorage.store_eighteenB=data;
             });
+          $localStorage.sem='18 B';
           $localStorage.message=$localStorage.store_eighteenB;
           $location.path('/day'+n);
         };
@@ -41,6 +45,7 @@ var app=angular
             Class17A.query(function(data) {
             $localStorage.store_seventeenA=data;
             });
+          $localStorage.sem='17 A';
           $localStorage.message=$localStorage.store_seventeenA;
           $location.path('/day'+n);
         };
@@ -48,6 +53,7 @@ var app=angular
             Class17B.query(function(data) {
             $localStorage.store_seventeenB=data;
             });
+          $localStorage.sem='17 B';
           $localStorage.message=$localStorage.store_seventeenB;
           $location.path('/day'+n);
         };
@@ -55,6 +61,7 @@ var app=angular
             Class16A.query(function(data) {
             $localStorage.store_sixteenA=data;
             });
+          $localStorage.sem='16 A';
           $localStorage.message=$localStorage.store_sixteenA;
           $location.path('/day'+n);
         };
@@ -62,16 +69,18 @@ var app=angular
             Class16B.query(function(data) {
             $localStorage.store_sixteenB=data;
             });
+          $localStorage.sem='16 B';
           $localStorage.message=$localStorage.store_sixteenB;
           $location.path('/day'+n);
         };
 
         $scope.update=function(){
-          alert("Your routine has been Updated!");
+          alert("Your routine has been updated!");
           $location.reload();
         };
 
         $scope.subjects=$localStorage.message;
+        $scope.semester=$localStorage.sem;
 
       $scope.monday=function(){
         $location.path('/day1');
