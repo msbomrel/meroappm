@@ -22,43 +22,13 @@
     </md-tabs>
 </md-toolbar>
 
-<div ng-controller="GlobalController">
-   <!--<md-toolbar class="md-menu">
-       <div layout="row">
-           <div>
-               <md-menu-bar>
-                   <md-menu>
-                       <button ng-click="monday()"><b>Mon</b></button>
-                   </md-menu>
-                   <md-menu-divider></md-menu-divider>
-                   <md-menu>
-                        <button ng-click="tuesday()"><b>Tue</b></button>
-                   </md-menu>
-                   <md-menu-divider></md-menu-divider>
-                   <md-menu>
-                        <button ng-click="wednesday()"><b>Wed</b></button>
-                   </md-menu>
-                   <md-menu-divider></md-menu-divider>
-                   <md-menu>
-                        <button ng-click="thursday()"><b>Thu</b></button>
-                   </md-menu>
-                   <md-menu-divider></md-menu-divider>
-                   <md-menu>
-                        <button ng-click="friday()"><b>Fri</b></button>
-                   </md-menu>
-                   <md-menu-divider></md-menu-divider>
-               </md-menu-bar>
-           </div>
-       </div>
-   </md-toolbar>
-</div>-->
-
 <div ng-controller="GlobalController" ng-cloak layout="row">
   <div flex>
     <div class="demo-swipe" md-swipe-left="friday()" md-swipe-right="wednesday()" md-swipe-down="update()">
           <md-card>
+            <div my-background-image="../www/img/DWIT.jpg">
               <md-card-header>
-                <h1>Thursday</h1>
+                <h1>Thursday {{semester}}</h1>
               </md-card-header>
 
               <div ng-controller="GlobalController">
@@ -70,8 +40,7 @@
                       </md-card>
                   </div>
               </div>
+              </div>
           </md-card>
     </div>
   </div>
-</div>
-</div>
