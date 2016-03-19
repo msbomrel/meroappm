@@ -4,7 +4,7 @@ var app=angular
 
   .config(function($stateProvider, $urlRouterProvider){
 
-    $urlRouterProvider.otherwise('/navbar');
+    $urlRouterProvider.otherwise('/home');
 
     $stateProvider
       .state('home',{
