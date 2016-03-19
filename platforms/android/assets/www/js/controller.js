@@ -67,6 +67,7 @@ var app=angular
         };
 
         $scope.update=function(){
+          alert("Your routine has been Updated!");
           $location.reload();
         };
 
@@ -95,6 +96,7 @@ var app=angular
 
 
 
+
   })
 
 
@@ -109,6 +111,15 @@ var app=angular
   /*.controller('GlobalController',function($scope, backcallFactory)
   {
     backcallFactory.backcallfun();
-  })*/;
+  })*/
 
-
+  .directive('myBackgroundImage', function () {
+        return function (scope, element, attrs) {
+            element.css({
+                'background-image': 'url(' + attrs.myBackgroundImage + ')',
+                    'background-size': 'cover',
+                    'background-repeat': 'no-repeat',
+                    'background-position': 'center center'
+            });
+        };
+    });
