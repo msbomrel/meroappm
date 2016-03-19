@@ -11,6 +11,7 @@ var app=angular
         url: "/home",
         templateUrl:'templates/config.html'
       })
+
       .state('navbar',{
         url: "/navbar",
         templateUrl:'templates/sidenavbar.html'
