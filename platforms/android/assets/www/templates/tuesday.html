@@ -1,3 +1,28 @@
+<md-toolbar>
+  <div class="md-toolbar-tools"><b><span>MY Routine</span></b>
+    <span flex> </span>
+    <md-button class="md-raised" ui-sref="home">Batch</md-button>
+  </div>
+  <md-tabs md-no-stretch md-select-on-focus="selectedIndex" md-no-pagination="true">
+    <md-tab id="tab1" ui-sref="day1">
+      MON
+      </md-tab>
+      <md-tab id="tab2" ui-sref="day2">
+        TUE
+      </md-tab>
+      <md-tab id="tab3" ui-sref="day3" >
+       WED
+      </md-tab>
+      <md-tab id="tab4" ui-sref="day4">
+        THU
+      </md-tab>
+      <md-tab id="tab5" ui-sref="day5">
+        FRI
+      </md-tab>
+    </md-tabs>
+</md-toolbar>
+
+
 <div ng-controller="GlobalController">
    <!--<md-toolbar class="md-menu">
        <div layout="row">
@@ -32,11 +57,12 @@
 <div ng-controller="GlobalController" ng-cloak layout="row">
   <div flex>
     <div class="demo-swipe" md-swipe-left="wednesday()" md-swipe-right="monday()">
+         <md-card>
           <md-content>
               <md-header>
                 <h1>Tuesday</h1>
               </md-header>
-
+          </md-card>
               <div ng-controller="GlobalController">
                   <div ng-repeat="sub in subjects">
                       <md-card>
@@ -51,3 +77,4 @@
   </div>
 </div>
 
+</div>
