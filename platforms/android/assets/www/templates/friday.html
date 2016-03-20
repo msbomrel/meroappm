@@ -24,39 +24,8 @@
 
 
 <div ng-controller="GlobalController">
-   <!--<md-toolbar class="md-menu">
-       <div layout="row">
-           <div>
-               <md-menu-bar>
-                   <md-menu>
-                       <button ng-click="monday()"><b>Mon</b></button>
-                   </md-menu>
-                   <md-menu-divider></md-menu-divider>
-                   <md-menu>
-                        <button ng-click="tuesday()"><b>Tue</b></button>
-                   </md-menu>
-                   <md-menu-divider></md-menu-divider>
-                   <md-menu>
-                        <button ng-click="wednesday()"><b>Wed</b></button>
-                   </md-menu>
-                   <md-menu-divider></md-menu-divider>
-                   <md-menu>
-                        <button ng-click="thursday()"><b>Thu</b></button>
-                   </md-menu>
-                   <md-menu-divider></md-menu-divider>
-                   <md-menu>
-                        <button ng-click="friday()"><b>Fri</b></button>
-                   </md-menu>
-                   <md-menu-divider></md-menu-divider>
-               </md-menu-bar>
-           </div>
-       </div>
-   </md-toolbar>
-</div>-->
-
-<!--<div ng-controller="GlobalController" ng-cloak layout="row">-->
   <div flex>
-    <div class="demo-swipe" md-swipe-left="monday()" md-swipe-right="thursday()">
+    <div class="demo-swipe" md-swipe-left="monday()" md-swipe-right="thursday()" md-swipe-down="update()">
           <md-card>
             <md-card class="menuBar">
               <h1>Friday 20{{semester}}</h1>
@@ -76,7 +45,6 @@
           </md-card>
     </div>
   </div>
-<!--</div>-->
 
   </div>
 

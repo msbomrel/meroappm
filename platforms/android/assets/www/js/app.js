@@ -14,10 +14,9 @@ var app=angular
 
       .state('navbar',{
         url: "/navbar",
-        templateUrl:'templates/sidenavbar.html'
+        templateUrl:'templates/sidenavbar.html',
+        controller:'GlobalController'
       })
-
-
 
       .state('day0',{
         url:"/day0",

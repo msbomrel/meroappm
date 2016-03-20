@@ -4,9 +4,13 @@
 var app=angular
     .module('myController',[])
 
-    .controller('GlobalController',function ($mdToast,$scope,$location,$localStorage,Class19A,Class19B,Class18A,Class18B,Class17A,Class17B,Class16A,Class16B) {
+    .controller('GlobalController',function ($mdToast,$mdSidenav,$scope,$location,$localStorage,Class19A,Class19B,Class18A,Class18B,Class17A,Class17B,Class16A,Class16B) {
           var d = new Date();
           var n = d.getDay();
+
+      window.onload=function(){
+         $scope.goToWhere();
+      };
 
         $scope.nineteenA=function(){
             Class19A.query(function(data) {
@@ -106,9 +110,14 @@ var app=angular
           controller  : 'ToastCtrl',
           templateUrl : 'templates/toast-template.html'
         });
-
           $location.reload();
         };
+
+      $scope.goToWhere= function () {
+        $location.path('/day'+n);
+      };
+
+
     })
 
 

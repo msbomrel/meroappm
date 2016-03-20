@@ -3,7 +3,7 @@
     <span flex> </span>
     <md-button class="md-raised" ui-sref="home">Batch</md-button>
   </div>
-  <md-tabs md-autofocus="false" md-no-pagination="true">
+  <md-tabs md-no-stretch md-select-on-focus="selectedIndex" md-no-pagination="true">
     <md-tab id="tab1" ui-sref="day1">
       MON
       </md-tab>
@@ -21,15 +21,20 @@
       </md-tab>
     </md-tabs>
 </md-toolbar>
+
+
+<div ng-controller="GlobalController">
+
 <div ng-controller="GlobalController" ng-cloak layout="row">
   <div flex>
     <div class="demo-swipe" md-swipe-left="tuesday()" md-swipe-right="friday()" md-swipe-down="update()">
           <md-card>
             <div my-background-image="../www/img/DWIT.jpg">
               <md-card class="menuBar">
-                <h1>Monday 20{{semester}}</h1>
+                <h1>Monday {{semester}}</h1>
               </md-card>
 
+              <div ng-controller="GlobalController">
                   <div ng-repeat="sub in subjects">
                       <md-card>
                           <md-card-content>
@@ -44,3 +49,4 @@
   </div>
 </div>
 
+</div>
