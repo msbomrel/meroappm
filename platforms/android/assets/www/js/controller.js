@@ -8,8 +8,8 @@ var app=angular
           var d = new Date();
           var n = d.getDay();
 
-      window.onload=function(){
-         $scope.goToWhere();
+      $scope.goToWhere= function () {
+        $location.path('/day'+n);
       };
 
         $scope.nineteenA=function(){
@@ -112,12 +112,6 @@ var app=angular
         });
           $location.reload();
         };
-
-      $scope.goToWhere= function () {
-        $location.path('/day'+n);
-      };
-
-
     })
 
 
