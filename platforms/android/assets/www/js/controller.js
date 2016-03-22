@@ -5,6 +5,7 @@ var app=angular
     .module('myController',[])
 
     .controller('GlobalController',function ($mdToast,$mdSidenav,$scope,$location,$localStorage,Class19A,Class19B,Class18A,Class18B,Class17A,Class17B,Class16A,Class16B) {
+
           var d = new Date();
           var n = d.getDay();
 
