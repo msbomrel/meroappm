@@ -13,6 +13,7 @@ var app=angular
     }
     else {
       $rootScope.backButtonPressedOnceToExit = true;
+      ionic.Platform.exitApp();
       window.plugins.toast.showShortCenter(
         "Press back button again to exit",function(a){},function(b){}
       );
