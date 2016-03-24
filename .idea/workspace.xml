@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b00f0e67-d6b2-4f8b-9e76-58fc4b142801" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/android/android.apk" afterPath="$PROJECT_DIR$/out/production/android/android.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/android/android.unaligned.apk" afterPath="$PROJECT_DIR$/out/production/android/android.unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/controller.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/friday.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/friday.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/monday.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/monday.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/thursday.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/thursday.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/tuesday.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/tuesday.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/templates/wednesday.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/templates/wednesday.html" />
     </list>
     <ignored path="meroapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -119,7 +111,7 @@
       <file leaf-file-name="friday.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/platforms/android/assets/www/templates/friday.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14489311">
+            <state vertical-scroll-proportion="0.103565365">
               <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
               <folding />
             </state>
@@ -1348,7 +1340,7 @@
       <workItem from="1458525968147" duration="7446000" />
       <workItem from="1458570938502" duration="1074000" />
       <workItem from="1458785423691" duration="217000" />
-      <workItem from="1458823612957" duration="1823000" />
+      <workItem from="1458823612957" duration="2060000" />
     </task>
     <task id="LOCAL-00001" summary="Sucessfully changes the day">
       <created>1458366338216</created>
@@ -1408,7 +1400,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121928000" />
+    <option name="totallyTimeSpent" value="122165000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -1425,7 +1417,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23602484" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.83666664" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26086956" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26086956" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27306002" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1839,7 +1831,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/platforms/android/assets/www/templates/friday.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14489311">
+        <state vertical-scroll-proportion="0.103565365">
           <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
           <folding />
         </state>
