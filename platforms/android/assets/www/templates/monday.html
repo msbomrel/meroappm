@@ -1,42 +1,62 @@
 <md-toolbar>
-  <div class="md-toolbar-tools"><b><span>MYN Routine</span></b>
+  <div class="md-toolbar-tools"><b>MYN Routine</b>
     <span flex> </span>
-    <md-button class="md-raised" ui-sref="home">Batch</md-button>
+    <md-button class="md-accent" ui-sref="home" ng-click="updateAll()">Batch</md-button>
   </div>
-  <md-tabs md-no-stretch md-select-on-focus="selectedIndex" md-no-pagination="true">
-    <md-tab id="tab1" ui-sref="day1">
-      MON
-      </md-tab>
-      <md-tab id="tab2" ui-sref="day2">
+  <md-tabs layout-fill class="md-primary" md-no-pagination="true" md-border-bottom="true" md-dynamic-height="true">
+    <md-tab id="tab1" ui-sref="day1" >
+      <all-tabs class="demo-tab">
+        MON
+      </all-tabs>
+    </md-tab>
+    <md-tab id="tab2" ui-sref="day2">
+      <all-tabs class="demo-tab">
         TUE
-      </md-tab>
-      <md-tab id="tab3" ui-sref="day3" >
-       WED
-      </md-tab>
-      <md-tab id="tab4" ui-sref="day4">
+      </all-tabs>
+    </md-tab>
+    <md-tab id="tab3" ui-sref="day3" >
+      <all-tabs class="demo-tab">
+        WED
+      </all-tabs>
+    </md-tab>
+    <md-tab id="tab4" ui-sref="day4">
+      <all-tabs class="demo-tab">
         THU
-      </md-tab>
-      <md-tab id="tab5" ui-sref="day5">
+      </all-tabs>
+    </md-tab>
+    <md-tab id="tab5" ui-sref="day5">
+      <all-tabs class="demo-tab">
         FRI
-      </md-tab>
-    </md-tabs>
+      </all-tabs>
+    </md-tab>
+
+
+    <md-tab id="tab6" ui-sref="day5">
+      <all-tabs class="demo-tab">
+        SAT
+      </all-tabs>
+    </md-tab>
+
+  </md-tabs>
 </md-toolbar>
 
 
-
-<div ng-controller="GlobalController" ng-cloak layout="row">
+<div ng-controller="GlobalController">
   <div flex>
     <div class="demo-swipe" md-swipe-left="tuesday()" md-swipe-right="friday()" md-swipe-down="update()">
           <md-card>
             <div my-background-image="../www/img/DWIT.jpg">
-              <md-card class="menuBar">
-                 <h3 align="center">Monday{{semester}}</h3>
-              </md-card>
-              <div ng-controller="GlobalController">
+            <md-card class="menuBar">
+              <h3 align="center">Monday 20{{semester}}</h3>
+            </md-card>
+              </md-card-header>
+
+              <div ng-controller="GlobalController" ng-init="getSubjects()">
                   <div ng-repeat="sub in subjects">
                       <md-card>
                           <md-card-content>
-                             <b>{{sub.Time +" "}}</b><br><b>{{sub.Monday}}</b>
+                              <b>{{sub.Time +" "}}</b><br>
+                              <b>{{sub.Monday}}</b>
                           </md-card-content>
                       </md-card>
                   </div>
@@ -45,11 +65,10 @@
           </md-card>
     </div>
   </div>
-</div>
   <footer>
     <md-button class="buttonFooter" ng-click="showAdvanced($event)">
       <b>About Us</b>
     </md-button>
   </footer>
-<br>
+  </div>
 

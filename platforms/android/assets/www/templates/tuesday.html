@@ -1,7 +1,7 @@
 <md-toolbar>
-  <div class="md-toolbar-tools"><b>MY Routine</b>
+  <div class="md-toolbar-tools"><b>MYN Routine</b>
     <span flex> </span>
-    <md-button class="md-accent" ui-sref="home" >Batch</md-button>
+    <md-button class="md-accent" ui-sref="home" ng-click="updateAll()">Batch</md-button>
   </div>
   <md-tabs layout-fill class="md-primary" md-no-pagination="true" md-border-bottom="true" md-dynamic-height="true">
     <md-tab id="tab1" ui-sref="day1" >
@@ -29,25 +29,34 @@
         FRI
       </all-tabs>
     </md-tab>
+
+
+    <md-tab id="tab6" ui-sref="day5">
+      <all-tabs class="demo-tab">
+        SAT
+      </all-tabs>
+    </md-tab>
+
   </md-tabs>
 </md-toolbar>
 
 
-
-<div ng-controller="GlobalController" ng-cloak layout="row">
+<div ng-controller="GlobalController">
   <div flex>
     <div class="demo-swipe" md-swipe-left="wednesday()" md-swipe-right="monday()" md-swipe-down="update()">
           <md-card>
             <div my-background-image="../www/img/DWIT.jpg">
-              <md-card class="menuBar">
-                <h3 align="center">Tuesday 20{{semester}}</h3>
-              </md-card>
+            <md-card class="menuBar">
+              <h3 align="center">Tuesday 20{{semester}}</h3>
+            </md-card>
+              </md-card-header>
 
-              <div ng-controller="GlobalController">
+              <div ng-controller="GlobalController" ng-init="getSubjects()">
                   <div ng-repeat="sub in subjects">
                       <md-card>
                           <md-card-content>
-                              <b>{{sub.Time +" "}}</b><br><b>{{sub.Tuesday}}</b>
+                              <b>{{sub.Time +" "}}</b><br>
+                              <b>{{sub.Tuesday}}</b>
                           </md-card-content>
                       </md-card>
                   </div>
@@ -56,11 +65,10 @@
           </md-card>
     </div>
   </div>
-
+  <footer>
+    <md-button class="buttonFooter" ng-click="showAdvanced($event)">
+      <b>About Us</b>
+    </md-button>
+  </footer>
   </div>
-<footer>
-  <md-button class="buttonFooter" ng-click="showAdvanced($event)">
-    <b>About Us</b>
-  </md-button>
-</footer>
-<br>
+

@@ -13,6 +13,10 @@ var app=angular
         $location.path('/day'+n);
       };
 
+      $scope.updateAll=function(){
+        $scope.nineteenA();$scope.nineteenB();$scope.eighteenA();$scope.eighteenB();$scope.seventeenA();$scope.seventeenB();$scope.sixteenA();$scope.sixteenB();
+      };
+
         $scope.nineteenA=function(){
             Class19A.query(function(data) {
             $localStorage.store_nineteenA=data;
@@ -80,6 +84,11 @@ var app=angular
         };
 
 
+      $scope.getSubjects= function () {
+        $scope.subjects=$localStorage.message;
+        $scope.semester=$localStorage.sem;
+      };
+
         $scope.subjects=$localStorage.message;
         $scope.semester=$localStorage.sem;
 
@@ -122,6 +131,7 @@ var app=angular
           templateUrl : 'templates/toast-template.html'
         });
           $location.reload();
+          $scope.updateAll();
         };
 
   })
