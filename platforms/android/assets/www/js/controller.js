@@ -4,7 +4,7 @@
 var app=angular
     .module('myController',[])
 
-    .controller('GlobalController',function ($mdToast,$mdSidenav,$scope,$location,$localStorage,Class19A,Class19B,Class18A,Class18B,Class17A,Class17B,Class16A,Class16B) {
+    .controller('GlobalController',function ($mdDialog,$mdToast,$mdSidenav,$scope,$location,$localStorage,Class19A,Class19B,Class18A,Class18B,Class17A,Class17B,Class16A,Class16B) {
 
           var d = new Date();
           var n = d.getDay();
@@ -104,6 +104,16 @@ var app=angular
       };
       /*backcallFactory.backcallfun();*/
 
+    $scope.showAdvanced = function(ev) {
+       $mdDialog.show({
+        controller: 'GlobalController',
+        templateUrl: 'templates/aboutUs.html',
+        parent: angular.element(document.body),
+        targetEvent: ev,
+        clickOutsideToClose: true
+      })
+    };
+
     $scope.update=function(){
           $mdToast.show({
           hideDelay   : 2000,
@@ -113,7 +123,8 @@ var app=angular
         });
           $location.reload();
         };
-    })
+
+  })
 
 
   .controller('rightCtrl',function($scope, $mdSidenav) {

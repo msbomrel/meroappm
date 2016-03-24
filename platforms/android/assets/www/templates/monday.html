@@ -23,7 +23,6 @@
 </md-toolbar>
 
 
-<div ng-controller="GlobalController">
 
 <div ng-controller="GlobalController" ng-cloak layout="row">
   <div flex>
@@ -31,9 +30,8 @@
           <md-card>
             <div my-background-image="../www/img/DWIT.jpg">
               <md-card class="menuBar">
-                <h1>Monday {{semester}}</h1>
+                 <h3 align="center">Monday{{semester}}</h3>
               </md-card>
-
               <div ng-controller="GlobalController">
                   <div ng-repeat="sub in subjects">
                       <md-card>
@@ -48,5 +46,10 @@
     </div>
   </div>
 </div>
+  <footer>
+    <md-button class="buttonFooter" ng-click="showAdvanced($event)">
+      <b>About Us</b>
+    </md-button>
+  </footer>
+<br>
 
-</div>

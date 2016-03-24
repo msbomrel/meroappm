@@ -9,11 +9,13 @@ md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar{
 
 .menuBar{
   width:95%;
-  height:60px;
-  display:block;
+  height: auto;
+  display:inline-block;
   position:fixed;
   top:0;
   left:0;
+  background: #6495ed;
+  color: white;
 }
 
 
@@ -28,4 +30,54 @@ height: 2px;
 md-tab{
   height:2px;
   width: 2px;
+}
+
+
+/*Newly added*/
+.button {
+  border: none;
+  background: #1abc9c;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px;
+  width: 100%;
+  color: white;
+  /*margin-left: 25px;*/
+  /*margin-right:10px;*/
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.buttonBatch {
+  border: none;
+  /*background: #1e90ff;*/
+  background: #6495ed;
+  cursor: pointer;
+  /*border-radius: 2px;*/
+  padding: 5px;
+  width: 100%;
+  color: #ffffff;
+  /*margin-left: 25px;*/
+  /*margin-right:10px;*/
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.buttonBatch:hover {
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: white;
+  color: white;
+}
+
+.buttonFooter {
+  background: #1abc9c;
+  color: white;
+  display: inline-block;
+  float: right;
+  width: 40%;
+
 }
