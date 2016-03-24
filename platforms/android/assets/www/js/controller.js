@@ -105,8 +105,8 @@ var app=angular
 
     $scope.update=function(){
           $mdToast.show({
-          hideDelay   : 2000,
-          position    : 'top right',
+          hideDelay   : 1000,
+          position    : 'fixed',
           controller  : 'ToastCtrl',
           templateUrl : 'templates/toast-template.html'
         });
