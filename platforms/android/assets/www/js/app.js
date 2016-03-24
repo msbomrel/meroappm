@@ -1,6 +1,31 @@
 var app=angular
 
-  .module('routineApp',['ngStorage','ui.router','myFactory','myController','ngMaterial'])
+  .module('routineApp',['ionic','ngStorage','ui.router','myFactory','myController','ngMaterial'])
+
+  .run(function($rootScope, $ionicPlatform, $ionicHistory){
+  $ionicPlatform.registerBackButtonAction(function(e){
+    if ($rootScope.backButtonPressedOnceToExit) {
+      ionic.Platform.exitApp();
+    }
+
+    else if ($ionicHistory.backView()) {
+      $ionicHistory.goBack();
+    }
+    else {
+      $rootScope.backButtonPressedOnceToExit = true;
+      ionic.Platform.exitApp();
+      window.plugins.toast.showShortCenter(
+        "Press back button again to exit",function(a){},function(b){}
+      );
+      setTimeout(function(){
+        $rootScope.backButtonPressedOnceToExit = false;
+      },2000);
+    }
+    e.preventDefault();
+    return false;
+  },101);
+
+})
 
   .config(function($stateProvider, $urlRouterProvider){
 
@@ -69,37 +94,6 @@ var app=angular
     }
   })
   .controller;
-
-  /*.controller('GlobalController',function($scope, backcallFactory)
-  {
-    backcallFactory.backcallfun();
-  })
-
-  .factory('backcallFactory', ['$state','$ionicPlatform','$ionicHistory','$timeout',
-    function($state,$ionicPlatform,$ionicHistory,$timeout){
-
-   var obj={}
-   obj.backcallfun=function(){
-
-   $ionicPlatform.registerBackButtonAction(function () {
-   if ($state.current.name == "home") {
-   var action= confirm("Do you want to Exit?");
-   if(action){
-   navigator.app.exitApp();
-   }//no else here just if
-
-   }else{
-   $ionicHistory.nextViewOptions({
-   disableBack: true
-   });
-   $state.go('home');
-   //go to home page
-   }
-   },100);//registerBackButton
-   }//backcallfun
-   return obj;
-    }])*/
-
 
 
 

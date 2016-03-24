@@ -5,11 +5,12 @@ var app=angular
     .module('myController',[])
 
     .controller('GlobalController',function ($mdToast,$mdSidenav,$scope,$location,$localStorage,Class19A,Class19B,Class18A,Class18B,Class17A,Class17B,Class16A,Class16B) {
+
           var d = new Date();
           var n = d.getDay();
 
-      window.onload=function(){
-         $scope.goToWhere();
+      $scope.goToWhere= function () {
+        $location.path('/day'+n);
       };
 
         $scope.nineteenA=function(){
@@ -112,12 +113,6 @@ var app=angular
         });
           $location.reload();
         };
-
-      $scope.goToWhere= function () {
-        $location.path('/day'+n);
-      };
-
-
     })
 
 

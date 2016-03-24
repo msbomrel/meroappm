@@ -147,29 +147,4 @@ var app=angular
         });
       }
     };
-  }])
-
-  /*.factory('backcallFactory', ['$state','$ionicPlatform','$ionicHistory',
-    function($state,$ionicPlatform,$ionicHistory){
-
-    var obj={};
-    obj.backcallfun=function(){
-
-      $ionicPlatform.registerBackButtonAction(function () {
-        if ($state.current.name == "home") {
-          var action= confirm("Do you want to Exit?");
-          if(action){
-            navigator.exitApp();
-          }//no else here just if
-
-        }else{
-          $ionicHistory.nextViewOptions({
-            disableBack: true
-          });
-          $state.go('home');
-          //go to home page
-        }
-      });//registerBackButton
-    };//backcallfun
-    return obj;
-  }])*/;
+  }]);
